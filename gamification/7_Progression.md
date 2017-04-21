@@ -1,0 +1,3 @@
+- Système de progression à travers une barre d’expérience visible à tout moment.
+- L’avatar va évoluer à chaque nouveau palier atteint. L’expérience se gagnant en trouvant un maximum de Schmilblick
+- Pop-In de félicitation avec nombre de points gagnés à chaque Schmilblick trouvé.

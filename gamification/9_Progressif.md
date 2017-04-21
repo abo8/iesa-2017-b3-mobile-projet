@@ -1,0 +1,4 @@
+- Mise en place de plusieurs grades possibles que l'on obtient au fil du temps passé sur le jeu
+- Au fur et à mesure des parties, le règles se complexifient pour devenir plus complète
+- Instaurer un tutoriel
+- Donner des récompense de fidélité (Au bout de tant de partie -> Nouvel avatar par exemple)
