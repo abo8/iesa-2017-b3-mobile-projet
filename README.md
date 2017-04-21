@@ -1,7 +1,8 @@
 # SchmilblickSocks
 
-Alexandre Maillot
-Bastien Rémond
-Mathieu Arnaud
-Alexandre Ben Otham
-Ludovic Jeanne
+Membres :
+- Alexandre Maillot
+- Bastien Rémond
+- Mathieu Arnaud
+- Alexandre Ben Otham
+- Ludovic Jeanne
