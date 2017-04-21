@@ -12,3 +12,5 @@ Le concept : Un RPG solo qui utilisera les mécaniques de mini-jeux basé sur le
  - Tuer un ennemis rapporte des points qui peuvent être dépenser en niveau ou en stuff
  - Mourir fais perdre sa réserve de point mais de fais rien perdre d'autre
  - Des récompenses axés sur la survis seront deservit.
+ 
+ Vidéo : 
