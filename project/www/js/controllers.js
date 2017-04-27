@@ -2,6 +2,15 @@ angular.module('starter.controllers', [])
 
 .controller('DashCtrl', function($scope) {
 
+  $scope.images = [
+    'img/adam.jpg',
+    'img/ben.png',
+    'img/mike.png'
+  ]
+
+/*
+  window.localStorage.setItem("img", $scope.images);
+*/
 
   var callback = function(buttonIndex) {
     var sourceType = navigator.camera.PictureSourceType.PHOTOLIBRARY;
@@ -35,6 +44,16 @@ angular.module('starter.controllers', [])
     };
     window.plugins.actionsheet.show(options, callback);
   };
+
+  $scope.save = function () {
+    window.localStorage.setItem("img", $scope.image);
+    alert('Image enregsitrée !');
+    alert($scope.images);
+    $scope.images.push($scope.image);
+    alert($scope.images);
+    $scope.test = window.localStorage.getItem("img");
+  };
+  $scope.test = window.localStorage.getItem("img");
 })
 
 .controller('ChatsCtrl', function($scope, Chats) {
