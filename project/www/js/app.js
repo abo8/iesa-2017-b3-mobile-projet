@@ -49,7 +49,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     }
   })
-
+    .state('tab.images', {
+      url: '/dash/images',
+      views: {
+        'tab-dash': {
+          templateUrl: 'templates/images.html',
+          controller: 'DashCtrl'
+        }
+      }
+    })
   .state('tab.chats', {
       url: '/chats',
       views: {
