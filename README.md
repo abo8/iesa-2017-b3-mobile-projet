@@ -16,7 +16,7 @@ Le concept : Un RPG solo qui utilisera les mécaniques de mini-jeux basé sur le
  Vidéo : 
  https://www.youtube.com/watch?v=aJmXgMK4kFA
 
-
+------------------------
 
 Problèmes :
 Build failed -> ‘Cordova/CDVViewController.h’ file not found
