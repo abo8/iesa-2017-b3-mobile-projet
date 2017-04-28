@@ -7,6 +7,10 @@ Membres :
 - Alexandre Ben Otham
 - Ludovic Jeanne
 
+------------------------------
+
+DAY 0
+
 Le concept : Un RPG solo qui utilisera les mécaniques de mini-jeux basé sur les devinettes du Schmilblick pour les combats.
 
  - Tuer un ennemis rapporte des points qui peuvent être dépenser en niveau ou en stuff
@@ -15,3 +19,12 @@ Le concept : Un RPG solo qui utilisera les mécaniques de mini-jeux basé sur le
  
  Vidéo : 
  https://www.youtube.com/watch?v=aJmXgMK4kFA
+
+------------------------------
+
+DAY 2
+
+Evolution de projet : géolocalisation / contact / camera
+
+
+
