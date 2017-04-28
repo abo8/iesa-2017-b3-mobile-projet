@@ -26,6 +26,10 @@ DAY 2
 
 Evolution de projet : géolocalisation / contact / camera
 
-Vidéo : 
+Vidéo 1 : Equipe SchmilblickSocks - Pitch projet n°2
+https://www.youtube.com/watch?v=p5jDjLduEVo
+
+Vidéo 2 : Equipe SchmilblickSocks - 4 fonctionnalités
+https://www.youtube.com/watch?v=-nzWgAesQDc
 
 
