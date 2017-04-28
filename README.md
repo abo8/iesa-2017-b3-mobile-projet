@@ -26,5 +26,6 @@ DAY 2
 
 Evolution de projet : géolocalisation / contact / camera
 
+Vidéo : 
 
 
