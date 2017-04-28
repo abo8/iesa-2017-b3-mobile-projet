@@ -1,8 +1,8 @@
 -FICHE 14 : Avatar
 
-On parle des vatar que ce soit l’image type facebook/twitter
+On parle des avatars que ce soit l’image type facebook/twitter
 On laisse le choix à l'utilisateur de choisir son avatar
--Personnaliser son avatar 
+- Personnaliser son avatar 
 Resize 
 Habiller
 Avatar Animé ou non
