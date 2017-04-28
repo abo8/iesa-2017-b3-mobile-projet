@@ -136,6 +136,9 @@ app.controller('MapController', function($scope, $cordovaGeolocation, $ionicLoad
       var long = position.coords.longitude;
 
       var myLatlng = new google.maps.LatLng(lat, long);
+      var myLatlngA = new google.maps.LatLng(48.8568796,2.3730355999999997);
+      console.log(lat);
+      console.log(long);
 
       var mapOptions = {
         center: myLatlng,
@@ -145,10 +148,18 @@ app.controller('MapController', function($scope, $cordovaGeolocation, $ionicLoad
 
       var map = new google.maps.Map(document.getElementById("map"), mapOptions);
       var marker = new google.maps.Marker({
-        position: myLatlng
+        position: myLatlng,
+        title:'KevDu95',
+        label:'Ici',
+        animation: google.maps.Animation.DROP,
+        icon:'http://localhost:8100/img/miniAdam.png'
+      });
+      var markerA = new google.maps.Marker({
+        position: myLatlngA,
       });
       $scope.map = map;
       marker.setMap(map);
+      markerA.setMap(map);
       $ionicLoading.hide();
 
     }, function(err) {
