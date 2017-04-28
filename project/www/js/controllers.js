@@ -1,4 +1,4 @@
-angular.module('starter.controllers', [])
+angular.module('starter.controllers', ['ionic'])
 
 .controller('DashCtrl', function($scope) {
 
@@ -7,7 +7,6 @@ angular.module('starter.controllers', [])
     'img/ben.png',
     'img/mike.png'
   ]
-
 /*
   window.localStorage.setItem("img", $scope.images);
 */
