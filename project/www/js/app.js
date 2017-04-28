@@ -150,7 +150,7 @@ app.controller('MapController', function($scope, $cordovaGeolocation, $ionicLoad
       var marker = new google.maps.Marker({
         position: myLatlng,
         title:'KevDu95',
-        label:'Ici',
+        label:'Vous',
         animation: google.maps.Animation.DROP,
         icon:'http://localhost:8100/img/miniAdam.png'
       });
