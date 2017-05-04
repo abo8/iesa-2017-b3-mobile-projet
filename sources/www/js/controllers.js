@@ -75,10 +75,12 @@ angular.module('starter.controllers', ['ionic'])
 
   $scope.save = function () {
     window.localStorage.setItem("img", $scope.image);
-    alert('Image enregsitrée !');
-    alert($scope.images);
+/*    alert('Image enregsitrée !');
+    alert($scope.images);*/
     $scope.images.push($scope.image);
+/*
     alert($scope.images);
+*/
     $scope.test = window.localStorage.getItem("img");
   };
   $scope.test = window.localStorage.getItem("img");
@@ -101,6 +103,20 @@ angular.module('starter.controllers', ['ionic'])
 
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
   $scope.chat = Chats.get($stateParams.chatId);
+})
+
+.controller('GuildeCtrl', function($scope, $cordovaContacts, $ionicPlatform) {
+  $scope.joueurs = ['HardBeca', 'Manon', 'Remi', 'Romain CK'];
+
+  $scope.getAllContacts = function() {
+    var opts = {
+      multiple: true,
+      fields: ['displayName', 'name'],
+    };
+    $cordovaContacts.find(opts).then(function (contactsFound) {
+      $scope.contacts = contactsFound;
+    })
+  }
 })
 
 .controller('AccountCtrl', function($scope) {

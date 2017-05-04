@@ -1,0 +1,16 @@
+<ion-view view-title="Guilde">
+  <ion-content>
+    <h2>Membres de ma guilde : </h2>
+    <ion-item ng-repeat="joueur in joueurs" class="item-contact">
+      <ul>
+        <li>name : {{joueur}}</li>
+      </ul>
+    </ion-item>
+    <button class="button button-block button-balanced" ng-click="getAllContacts()">Get All Contacts</button>
+    <ion-item ng-repeat="contact in contacts" class="item-contact">
+      <ul>
+        <li>name : {{contact.name.formatted}}</li>
+      </ul>
+    </ion-item>
+  </ion-content>
+</ion-view>
