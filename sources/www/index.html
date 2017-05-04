@@ -50,6 +50,35 @@
   have templates inline in this html file if you'd like).
 -->
 <ion-nav-view></ion-nav-view>
+<script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script>
+  $(function () {
+    var config = {
+      apiKey: "AIzaSyAXQSVnq6cQIvsGgfDVluRjsqeOUk3MrJA",
+      authDomain: "schimlblicksocks-1493298410763.firebaseapp.com",
+      databaseURL: "https://schimlblicksocks-1493298410763.firebaseio.com",
+      projectId: "schimlblicksocks-1493298410763",
+      storageBucket: "schimlblicksocks-1493298410763.appspot.com",
+      messagingSenderId: "529069240524"
+    };
+    firebase.initializeApp(config);
+    return firebase.database().ref('/Ranking/').on('value', function (snapshot) {
+
+      var first = (snapshot.val()[1]);
+
+      var second = (snapshot.val()[2]);
+
+      var third = (snapshot.val()[3]);
+
+      $(".target-rank").html("Premier : " + first + "</br>"+"Deuxième : " + second + "</br>"+"Troisème :" + third + "</br>");
+
+    });
+    // ...
+  });
+  // Initialize Firebase
+
+</script>
 <script src="https://maps-api-ssl.google.com/maps/api/js?libraries=places"></script>
 </body>
 </html>
