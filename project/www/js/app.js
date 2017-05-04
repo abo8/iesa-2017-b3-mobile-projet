@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
+var app = angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','ngCordova'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -76,7 +76,14 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         }
       }
     })
-
+    .state('tab.geo', {
+      url: '/geolocalisation',
+      views: {
+        'tab-geolocalisation': {
+          templateUrl: 'templates/geolocalisation.html',
+        }
+      }
+    })
   .state('tab.account', {
     url: '/account',
     views: {
@@ -91,3 +98,84 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   $urlRouterProvider.otherwise('/tab/dash');
 
 });
+// Ionic Starter App
+
+// angular.module is a global place for creating, registering and retrieving Angular modules
+// 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
+// the 2nd parameter is an array of 'requires'
+
+app.run(function($ionicPlatform) {
+  $ionicPlatform.ready(function() {
+    // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+    // for form inputs)
+    if(window.cordova && window.cordova.plugins.Keyboard) {
+      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+    }
+    if(window.StatusBar) {
+      StatusBar.styleDefault();
+    }
+  });
+});
+
+app.controller('MapController', function($scope, $cordovaGeolocation, $ionicLoading, $ionicPlatform) {
+
+  $ionicPlatform.ready(function() {
+
+    $ionicLoading.show({
+      template: '<ion-spinner icon="bubbles"></ion-spinner><br/>Acquiring location!'
+    });
+
+    var posOptions = {
+      enableHighAccuracy: true,
+      timeout: 20000,
+      maximumAge: 0
+    };
+
+    $cordovaGeolocation.getCurrentPosition(posOptions).then(function (position) {
+      var lat  = position.coords.latitude;
+      var long = position.coords.longitude;
+
+      var myLatlng = new google.maps.LatLng(lat, long);
+      var myLatlngA = new google.maps.LatLng(48.8568796,2.3730355999999997);
+      console.log(lat);
+      console.log(long);
+
+      var mapOptions = {
+        center: myLatlng,
+        zoom: 16,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      };
+
+      var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+      var marker = new google.maps.Marker({
+        position: myLatlng,
+        title:'KevDu95',
+        label:'Vous',
+        animation: google.maps.Animation.DROP,
+        icon:'http://localhost:8100/img/miniAdam.png'
+      });
+      var markerA = new google.maps.Marker({
+        position: myLatlngA,
+      });
+      $scope.map = map;
+      marker.setMap(map);
+      markerA.setMap(map);
+      $ionicLoading.hide();
+
+    }, function(err) {
+      $ionicLoading.hide();
+      console.log(err);
+    });
+  })
+});
+/**
+ * Created by basti on 27/04/2017.
+ */
+// Ionic Starter App
+
+// angular.module is a global place for creating, registering and retrieving Angular modules
+// 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
+// the 2nd parameter is an array of 'requires'
+
+
+

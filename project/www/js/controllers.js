@@ -1,4 +1,4 @@
-angular.module('starter.controllers', [])
+angular.module('starter.controllers', ['ionic'])
 
 .controller('DashCtrl', function($scope) {
 
@@ -7,10 +7,38 @@ angular.module('starter.controllers', [])
     'img/ben.png',
     'img/mike.png'
   ]
-
 /*
   window.localStorage.setItem("img", $scope.images);
 */
+  document.addEventListener("deviceready", onDeviceReady, false);
+  function onDeviceReady() {
+    var num1 = 180;
+
+    console.log(navigator.compass);
+
+    function onSuccess(heading) {
+      var element = document.getElementById('item-nul');
+      element.innerHTML = 'Heading: ' + heading.magneticHeading;
+      if (heading.magneticHeading - num1 >= 40){
+        alert('UN INDICE !');
+      }
+      num1 = heading.magneticHeading;
+    };
+
+    function onError(compassError) {
+      alert('Compass error: ' + compassError.code);
+    };
+
+    var options = {
+      frequency: 500
+    }; // Update every 3 seconds
+
+    $scope.watchID = function() {
+      navigator.compass.watchHeading(onSuccess, onError, options);
+      alert('tu lance la fonction');
+    }
+
+  }
 
   var callback = function(buttonIndex) {
     var sourceType = navigator.camera.PictureSourceType.PHOTOLIBRARY;
@@ -80,3 +108,6 @@ angular.module('starter.controllers', [])
     enableFriends: true
   };
 });
+
+
+
