@@ -20,6 +20,7 @@ var app = angular.module('starter', ['ionic', 'starter.controllers', 'starter.se
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
+    StatusBar.hide();
   });
 })
 
