@@ -39,6 +39,8 @@ https://www.youtube.com/watch?v=p5jDjLduEVo
 Vidéo 2 : Equipe SchmilblickSocks - 4 fonctionnalités
 https://www.youtube.com/watch?v=-nzWgAesQDc
 
+------------------------------
+
 Procédure d'installation : 
 
 Requirements : 
