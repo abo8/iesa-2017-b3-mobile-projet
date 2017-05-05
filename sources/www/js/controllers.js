@@ -12,7 +12,7 @@ angular.module('starter.controllers', ['ionic'])
 */
   document.addEventListener("deviceready", onDeviceReady, false);
   function onDeviceReady() {
-    var num1 = 180;
+    var num1 = 110;
 
     console.log(navigator.compass);
 
@@ -33,10 +33,7 @@ angular.module('starter.controllers', ['ionic'])
       frequency: 500
     }; // Update every 3 seconds
 
-    $scope.watchID = function() {
       navigator.compass.watchHeading(onSuccess, onError, options);
-      alert('tu lance la fonction');
-    }
 
   }
 
