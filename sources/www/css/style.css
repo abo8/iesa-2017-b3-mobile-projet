@@ -6,3 +6,11 @@
 .scroll {
   height: 100%;
 }
+#bg-game{
+  background-image: url("../img/GandalfVSBalrog.jpg");
+  background-size: cover;
+  text-align: center;
+}
+#title-game{
+  color: white;
+}
