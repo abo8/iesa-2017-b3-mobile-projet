@@ -10,7 +10,13 @@
         "cordova-plugin-console": {
             "PACKAGE_NAME": "com.ionicframework.project750174"
         },
+        "cordova-plugin-contacts": {
+            "PACKAGE_NAME": "com.ionicframework.project750174"
+        },
         "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.ionicframework.project750174"
+        },
+        "cordova-plugin-device-orientation": {
             "PACKAGE_NAME": "com.ionicframework.project750174"
         },
         "cordova-plugin-splashscreen": {
@@ -23,12 +29,6 @@
             "PACKAGE_NAME": "com.ionicframework.project750174"
         },
         "ionic-plugin-keyboard": {
-            "PACKAGE_NAME": "com.ionicframework.project750174"
-        },
-        "cordova-plugin-device-orientation": {
-            "PACKAGE_NAME": "com.ionicframework.project750174"
-        },
-        "cordova-plugin-contacts": {
             "PACKAGE_NAME": "com.ionicframework.project750174"
         }
     },
