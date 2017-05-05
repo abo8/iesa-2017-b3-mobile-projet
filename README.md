@@ -55,3 +55,7 @@ Requirements :
 4) Pour aperçu Web : ionic serve -l
 5) Pour aperçu emlateur : ionic emulate android/ios
 
+------------------------------
+
+Lien rapport : https://docs.google.com/document/d/1y5rvEslAJrC6mj5joULbSdnqC_70S0bkBAx9EBXBEI4/edit?usp=sharing
+
