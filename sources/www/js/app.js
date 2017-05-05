@@ -100,10 +100,19 @@ var app = angular.module('starter', ['ionic', 'starter.controllers', 'starter.se
             controller: 'AccountCtrl'
           }
         }
-      });
+      })
+    .state('tab.guilde', {
+      url: '/account/guilde',
+      views: {
+        'tab-account': {
+          templateUrl: 'templates/guilde.html',
+          controller: 'GuildeCtrl'
+        }
+      }
+    });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/dash');
+  $urlRouterProvider.otherwise('/tab/game');
 
 });
 // Ionic Starter App
